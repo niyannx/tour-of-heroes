@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-messages',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent {
+  // messageService property must be public because we're going to bind to it in the template
+  constructor(public messageService: MessageService) {
 
+  }
 }
